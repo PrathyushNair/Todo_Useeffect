@@ -5,8 +5,10 @@ import Item from "../components/item"
 
     const[todos,setTodos]=React.useState([])
     const[newtodo,setNewtodo]=React.useState([])
-    
+    let [flag,setFlag]=React.useState(false)
     let[page,setPage]=React.useState(1)
+
+    
       React.useEffect(()=>{
         fetch(`http://localhost:3004/todos?_page=${page}&_limit=3`)
         .then((resp)=>resp.json())
@@ -14,7 +16,9 @@ import Item from "../components/item"
             console.log(resp)
             setTodos(resp)
           })
-          },[page])
+          },[page,flag])
+
+
       const saveinfo=()=>{
         if(newtodo!==""){
           console.log("new",newtodo)
@@ -44,7 +48,7 @@ import Item from "../components/item"
           
         {todos.map((el)=>(
           <>
-           <Item todos={todos} setTodos={setTodos} el={el}/>
+           <Item flag={flag} setFlag={setFlag} todos={todos} setTodos={setTodos} el={el}/>
           </>
             
         ))}

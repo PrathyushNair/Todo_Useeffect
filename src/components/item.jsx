@@ -1,20 +1,23 @@
 import React from 'react'
 import style from "../components/Todosstyle.module.css"
- const Item = ({el,todos,setTodos}) => {
+ const Item = ({el,todos,setTodos,flag,setFlag}) => {
     let [status,setStatus]=React.useState(el.completed)
+    
     const deleteitm=(id)=>{
-        // fetch(`http://localhost:3004/todos/${id}`,{
-        //     method:"DELETE",
-        //     headers:{"Content-type":"application/json"},
+        fetch(`http://localhost:3004/todos/${id}`,{
+            method:"DELETE",
+            headers:{"Content-type":"application/json"},
            
-        //     })
-        //     .then((resp)=>resp.json())
-        //     .then((resp)=>{
-        //     console.log(resp)
-        //     setTodos(todos)
-        //    })
+            })
+            .then((resp)=>resp.json())
+            .then((resp)=>{
+            console.log(resp)
+            setTodos(todos)
+            setFlag(!flag)
+           })
+          
         //    console.log(id)
-        setTodos(todos.filter((item)=>(item.id!==id)))
+        //setTodos(todos.filter((item)=>(item.id!==id)))
       }
       let check=(e,completed,value)=>{
         if(e.target.checked)
