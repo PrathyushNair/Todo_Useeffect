@@ -6,7 +6,7 @@ function App() {
   
   return (
     <div  className={styles.container}>
-      <h1>To Do Using UseEffect</h1>
+      <h1 style={{color:"blue"}}>To Do List</h1>
       <Todos/>
     </div>
   );

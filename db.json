@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "value": "Physics",
-      "completed": false,
-      "id": 1
-    },
-    {
       "value": "Maths",
       "completed": false,
       "id": 2
@@ -14,6 +9,51 @@
       "value": "Computer Science",
       "completed": false,
       "id": 3
+    },
+    {
+      "value": "Study Coding",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "value": "Study Physics",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "value": "Get Vegetables",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "value": "Visit friends",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "value": "Go on a walk",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "value": "Celebrate sisters birthday",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "value": "Meet Samyak",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "value": "Meet Ravi ",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "value": "Meet Shrenik and Pritesh",
+      "completed": false,
+      "id": 12
     }
   ]
 }

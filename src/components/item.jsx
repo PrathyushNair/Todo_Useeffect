@@ -41,7 +41,7 @@ import style from "../components/Todosstyle.module.css"
       }
       let handleupdate=(id)=>{
         setUpdateder(!updater)
-        if(updater)
+        if(updater &&updatedval!=="")
         {
           fetch(`http://localhost:3004/todos/${id}`,
           {method:"PATCH",
@@ -62,8 +62,8 @@ import style from "../components/Todosstyle.module.css"
             {status ? <div ><s>{el.value}</s></div>:<div >{el.value}</div> }
             {updater && < input onChange={handleupdatechange} placeholder='Update here'/>}
             <div style={{display:"flex",gap:"10px"}}>
-              <button onClick={()=>handleupdate(el.id)} style={{backgroundColor:"blue",color:"white",width:"50%"}}>Update</button>
-              <button onClick={()=>deleteitm(el.id)} style={{backgroundColor:"blue",color:"white",width:"50%"}}>Delete</button>
+              <button onClick={()=>handleupdate(el.id)} style={{borderRadius:"20px",backgroundColor:"blue",color:"white",width:"50%"}}>Update</button>
+              <button onClick={()=>deleteitm(el.id)} style={{borderRadius:"20px",backgroundColor:"blue",color:"white",width:"50%"}}>Delete</button>
             </div>
             
     </div>

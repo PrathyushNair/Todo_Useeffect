@@ -55,11 +55,11 @@ import Item from "../components/item"
         ))}
         </div>
         <div style={{display:"flex",justifyContent:"space-evenly",margin:"auto",width:"20%",marginTop:"20px"}}>
-          <div>Page:</div>
-          <div style={{cursor:"pointer",border:"1px solid black",backgroundColor:"blue",color:"white"}} onClick={()=>handlepage(1)}>1.</div>
-          <div style={{cursor:"pointer",border:"1px solid black",backgroundColor:"blue",color:"white"}} onClick={()=>handlepage(2)}>2.</div>
-          <div style={{cursor:"pointer",border:"1px solid black",backgroundColor:"blue",color:"white"}} onClick={()=>handlepage(3)}>3.</div>
-          <div style={{cursor:"pointer",border:"1px solid black",backgroundColor:"blue",color:"white"}} onClick={()=>handlepage(4)}>4.</div>
+          <div style={{fontSize:"large"}}>Page:</div>
+          <div className={style.pagebtn} onClick={()=>handlepage(1)}>1.</div>
+          <div className={style.pagebtn} onClick={()=>handlepage(2)}>2.</div>
+          <div className={style.pagebtn} onClick={()=>handlepage(3)}>3.</div>
+          <div className={style.pagebtn} onClick={()=>handlepage(4)}>4.</div>
         </div>
     </div>
   )
