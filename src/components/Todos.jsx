@@ -7,8 +7,9 @@ import Item from "../components/item"
     const[newtodo,setNewtodo]=React.useState([])
     let [flag,setFlag]=React.useState(false)
     let[page,setPage]=React.useState(1)
+    let[patch,setPatch]=React.useState(false)
 
-    
+
       React.useEffect(()=>{
         fetch(`http://localhost:3004/todos?_page=${page}&_limit=3`)
         .then((resp)=>resp.json())
@@ -16,7 +17,7 @@ import Item from "../components/item"
             console.log(resp)
             setTodos(resp)
           })
-          },[page,flag])
+          },[page,flag,patch])
 
 
       const saveinfo=()=>{
@@ -48,7 +49,7 @@ import Item from "../components/item"
           
         {todos.map((el)=>(
           <>
-           <Item flag={flag} setFlag={setFlag} todos={todos} setTodos={setTodos} el={el}/>
+           <Item patch={patch} setPatch={setPatch}flag={flag} setFlag={setFlag} todos={todos} setTodos={setTodos} el={el}/>
           </>
             
         ))}

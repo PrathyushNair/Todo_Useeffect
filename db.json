@@ -1,9 +1,19 @@
 {
   "todos": [
     {
-      "value": "Chemistry",
+      "value": "Physics",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "value": "Maths",
       "completed": false,
       "id": 2
+    },
+    {
+      "value": "Computer Science",
+      "completed": false,
+      "id": 3
     }
   ]
 }
